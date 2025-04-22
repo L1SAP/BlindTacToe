@@ -2,6 +2,11 @@ const cells  = document.querySelectorAll(".cell");
 const statusText = document.querySelector("#statusText");
 const restartButton = document.querySelector("#restartButton");
 let winningCombo = [];
+const box = document.getElementById('hideTitle');
+
+box.addEventListener('mouseenter', () => {
+  box.classList.add('hovered');
+});
 
 // imaginaryTACTOE
 // [0,1,2]
@@ -50,7 +55,7 @@ function cellClicked(){
     if (options[cellIndex] !== "") {
         //HIGHLIGHT THE SHAME
         this.classList.add("invalid");
-        statusText.textContent = `Invalid move! ${currentPlayer} loses!`;
+        statusText.innerHTML = `Invalid move!<br> ${currentPlayer} LOST!!`;
         running = false;
         revealBoard();
         return;
