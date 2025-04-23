@@ -22,6 +22,9 @@ A fun project turning a simple game like Tic Tac Toe with a hidden twist.
  
 The idea of **not seeing your moves** until the end forces players to rely on memory, and it creates a fun surprise at the end of reveal. 
 
+04/23/2025
+With an addition of a timer, pressure players to make moves faster. Otherwise game will end after 3 seconds.
+
 
 ## Tech
 - HTML / CSS / JavaScript (Vanilla)
