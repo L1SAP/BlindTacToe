@@ -22,14 +22,6 @@ A fun project turning a simple game like Tic Tac Toe with a hidden twist.
  
 The idea of **not seeing your moves** until the end forces players to rely on memory, and it creates a fun surprise at the end of reveal. 
 
-I also wanted a beginner-friendly project to practice working with JavaScript, the DOM, and CSS.
-
-
-
-## 🛠️ What’s Next
-- Add a 1-player mode with AI
-- Add timer for pressure
-- expand tic tac toe grid for difficuilty 
 
 ## Tech
 - HTML / CSS / JavaScript (Vanilla)
