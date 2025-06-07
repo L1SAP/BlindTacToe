@@ -1,6 +1,11 @@
+<!--
+  BLIND TAC TOE - Game Page
+  This page sets up the game board, countdown timer, and core gameplay UI.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BLIND TAC TOE</title>
@@ -10,18 +15,23 @@
 <body>
   <div id="hideTitle">BLIND TAC TOE</div>
 
+   <!-- Navigation back to menu -->
   <h2><a href="menu.html">MENU</a></h2>
 
+  <!-- Start screen: message + start button -->
   <div id="startButton">
     <h2>TIMER WILL BEGIN ONCE STARTED</h2>
     <button id ="startStyle">Start</button>
   </div>
 
+   <!-- Countdown timer displayed after game starts -->
   <div id="timerContent" style="display: none;">
-    <p id="timer">5</p>
+    <p id="timer">3</p>
   </div>
 
-  <div id="cellContainer">
+
+  <!-- Game board: 3x3 grid with 9 clickable cells -->
+  <div id="gameBoard">
     <div cellIndex="0" class="cell"></div>
     <div cellIndex="1" class="cell"></div>
     <div cellIndex="2" class="cell"></div>
@@ -33,6 +43,7 @@
     <div cellIndex="8" class="cell"></div>
   </div>
 
+  <!-- Dynamic status text: shows whose turn, win/loss, etc. -->
   <h3 id="statusText"></h3>
   <button id="restartButton">Restart</button>
 

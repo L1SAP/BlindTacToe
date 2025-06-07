@@ -1,64 +1,75 @@
+/* ====== GLOBAL STYLES ====== */
 body{
-    background-color: grey;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-    text-align: center;
-    width: 100vw;
-    height: 100vh;
+  background-color: grey;
+  font-family:"Bungee", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
 
 }
 
-/* ANCHOR LINK STYLE */
+/* Anchor link styles (menu + navigation) */
 a{
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
+
 a:visited{
-    color: white;
+  color: white;
 }
 
-
-
-/*BLIND TITLE ANIMATION*/
+/* ====== TITLE ANIMATION ====== */
 #hideTitle{
-    font-size: 80px;
-  
+  font-size: 80px;
   transition: 0.3s ease;
   color: grey;
-
 }
+
+/* Color shift on mouse hover (handled via JS) */
 #hideTitle.hovered{
-    color: black;
+  color: black;
 }
-/* BLIND TAC TOE STYLES */
 
+/* ====== GAME BOARD ====== */
+/* Each cell (square) in the game board */
 .cell{
-    width: 75px;
-    height: 75px;
-    border: 2px solid;
-   box-shadow: 0 0 0 2px;
-   line-height: 75px;
-   font-size: 50px;
-   cursor: pointer;
+  width: 75px;
+  height: 75px;
+  border: 2px solid;
+  box-shadow: 0 0 0 2px;
+  line-height: 75px;
+  font-size: 50px;
+  cursor: pointer;
 }
 
-/* Highlight cells based on conditions */
+/*Animation for single cell clicked*/
+.cell.clicked{
+  animation: highlight .3s ease; 
+}
+
+@keyframes highlight{
+  100% {background-color: white;}
+}
+
+/* Highlight red on an invalid moves*/
 .invalid {
-    background-color: red;
-  
-  }
-  
-.win{
-    background-color: rgb(28, 241, 56);
+  background-color: red;
 }
 
+/* Highlight green on a winning move */
+.win{
+  background-color: rgb(28, 241, 56);
+}
 
-#cellContainer{
-    display:grid;
+/* Grid layout for 3x3 game board */
+#gameBoard{
+    display:none;
     grid-template-columns: repeat(3, auto);
     width: 225px;
     margin: auto;
 }
+
+/* ====== BUTTON STYLING ====== */
 #startButton {
   display: flex;
   flex-direction: column;
@@ -66,68 +77,54 @@ a:visited{
   margin-bottom: 20px; /* Adjust this value to control spacing below */
 }
 
-
-#startStyle{
+/* Start and Restart button styles */
+#startStyle,
+#restartButton{
   cursor: pointer;
   color: red;
   margin: auto;
-
+  font-family:"Bungee", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 24px;
-padding: 12px 24px;
-border-radius: 10px;
-}
-#restartButton{
-    cursor: pointer;
-    color: red;
-    margin: auto;
-
-    font-size: 24px;
   padding: 12px 24px;
   border-radius: 10px;
 }
+
+/* ====== STATUS DISPLAY ====== */
 #statusText{
-    font-size: 40px;
+  font-size: 40px;
 }
 
-/* OFFSET TIME LOCATION */
+/* ====== TIMER STYLING ====== */
+/* Timer container (in top right corner) */
 #timerContent {
   position: absolute;
-  top: 20px;       /* Distance from top */
-  right: 20px;     /* Distance from right */
-  background-color: transparent; /* optional */
+  top: 20px;      
+  right: 20px;    
+  background-color: transparent; 
   color: white;
   font-size: 60px;
 }
 
-/* TIMER INFO STYLE */
+/* timer number styling */
 #timer {
   font-size: 80px;
   font-weight: bold;
 
 }
 
-/* MENU STYLES */
-
+/* ====== GAME MENU (Navigation Links) ====== */
 .game-menu ul {
-   
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: grey;
+  font-size: 50px;
+  transition: all 0.3s ease;
+}
 
-    background-color: grey;
-    font-size: 50px;
-    transition: all 0.3s ease;
-  }
-
-  .game-menu ul:hover {
-    background-color: rgb(43, 70, 226);
-
-  }
-
-  .game-info{
-
-    font-size: 45px;
-   
-  }
+/* ====== GAME INSTRUCTIONS ====== */
+.game-info{
+  font-size: 45px;
+}
 
   

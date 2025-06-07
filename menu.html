@@ -1,6 +1,13 @@
+<!--
+  Game Menu Page - Blind Tac Toe
+  Provides navigation options for Player vs Player mode.
+  Displays game instructions.
+
+-->
 <!DOCTYPE html>
 <html>
     <head>
+      <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
         <title>Game Menu</title>
         <meta charset="utf-8">
         <meta name="viewport" content = "width=device-width, initial-scale=1.0">
@@ -10,18 +17,26 @@
     <body>
       <div id = "hideTitle">
        BLIND TAC TOE</div>
+
+        <!-- Navigation Menu -->
         <nav class="game-menu">
             <ul>
               <li><a href="BlindTacToe.html">PLAYER V PLAYER</a></li>
-              <li><a href="settings.html">1 PLAYER</a></li>
-              <li><a href="credits.html">Credits</a></li>
             </ul>
           </nav>
-          
-        <p class = "game-info">- Take turns as X and O<br>
-            - Don’t make the same move!!<br>
-            - At the end, moves are revealed and the winner is shown</p>
+        
+        <!-- Game Instructions -->
+        <p class="game-info">
+          YOUR CLASSIC TIC TAC TOE GAME WITH A TWIST<br><br>
+          Take turns as X or O<br>
+          3 X's or O's in a ROW or DIAGONALLY = WIN!!<br><br>
+          YOU HAVE 3 SEC TO MAKE A DECISION<br>
+          ONLY TAKE EMPTY SPACES!!<br>
+          YOU CANT SEE!!<br>
+          REMEMBER YOUR MOVE<br>
+          IN THE END EVERYTHING WE BE SHOWN
+        </p>
 
-         <script src = "index.js"></script>
+    <script src = "index.js"></script>
     </body>
 </html>
